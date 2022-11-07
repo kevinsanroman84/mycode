@@ -1,5 +1,5 @@
 # mycode (Project Title)
-
+Added edit with vim.
 Starting this repo to learn more about linux and python.
 Currently working through an apprenticeship and wantin to learn as much as I can before starting on the job training.
 
