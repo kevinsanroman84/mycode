@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import random
 import os
 clear = lambda: os.system('clear')
@@ -23,6 +25,7 @@ def main():
             if ans in choices:
                 move = ans
                 break
+            clear()
             print("Choice invalid...")
             ans = input("Choose your move: [Rock] [Paper] [Scissors] ").lower()
             print()
@@ -55,12 +58,15 @@ def main():
         if 0 >= health:
             print("You are overwhelmed by your defeat!".center(60))
             print("Everything went black!!!".center(60))
+            print()
             print(f"You defeated {opponets_defeated} opponents!".center(60))
+            print()
             redo = input("Would you like to try again?... [yes][no] ").lower()
             if redo == "yes":
                 health = 100
                 opponets_defeated = 0
             else:
+                print()
                 print("Thanks for playing!!!".center(60))
                 input()
                 break
@@ -70,3 +76,5 @@ def main():
         clear()
         
 main()
+
+# Looks great, Kevin!! Awesome job. I love that it's more than just a one round game, but that you have health stats too.
