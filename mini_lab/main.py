@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
+"""Mini lab priject | Rock Paper Scissors Game
+   Showcasing knowladge about conditionals, imports, Python's
+   system os module.
+"""
 
+# import additional code to complete our task
 import random
 import os
 clear = lambda: os.system('clear')
@@ -75,6 +80,7 @@ def main():
         input("Hit enter to continue".center(60))
         clear()
         
-main()
+if __name__ == "__main__":
+    main()
 
 # Looks great, Kevin!! Awesome job. I love that it's more than just a one round game, but that you have health stats too.
