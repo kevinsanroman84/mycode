@@ -1,15 +1,15 @@
 import random
 
-monster_names = ["Cavernfang"
-"Foulpest",
-"Stonevine",
-"Vexsword",
-"The Putrid Horror",
-"The Lone Body",
-"The Angry Gnoll",
-"The Evasive Vision Serpent",
-"The Mad Mist Buffalo",
-"The Silver Killer Beast"]
+monster_names = ["the Cavernfang"
+"the Foulpest",
+"the Stonevine",
+"the Vexsword",
+"the Putrid Horror",
+"the Lone Body",
+"the Angry Gnoll",
+"the Evasive Vision Serpent",
+"the Mad Mist Buffalo",
+"the Silver Killer Beast"]
 
 # Player creation
 def new_player():
