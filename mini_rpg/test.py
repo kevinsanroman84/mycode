@@ -38,7 +38,8 @@ rooms = {
     "Dining Room": {
         "west": "Hall",
         "south": "Garden",
-        "item": ["potion"]
+        "item": ["potion"], 
+        "monster": "monster"
     },
     "Garden": {
         "north": "Dining Room",
