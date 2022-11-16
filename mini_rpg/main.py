@@ -81,6 +81,15 @@ while player.health > 0 and not game_over:
     # therefore, "get golden key" becomes ["get", "golden key"]
     move = move.lower().split(" ", 1)
 
+    # check if there is a monster before they try to move or get item
+    if move[0] != "attack" and "monster" in rooms[player.current_room]:
+        current_monster = new_monster(current_monster)
+        player.health -= current_monster.attack_damage(player)
+        print("You took " + str(current_monster.attack_damage(player))+ " damage!")
+        print("Don't ignore the monster!!!")
+        # monster is now aware of your presense
+        current_monster.is_aware = True
+
     # if they type "go" first
     if move[0] == "go" and "monster" not in rooms[player.current_room]:
         # check that they are allowed wherever they want to go
@@ -133,11 +142,6 @@ while player.health > 0 and not game_over:
         else:
             print("No monster to attack...")
             print("You hit the wall and damage the wallpaper...")
-    if move[0] != "attack" and "monster" in rooms[player.current_room]:
-        current_monster = new_monster(current_monster)
-        player.health -= current_monster.attack_damage(player)
-        print("You took " + str(current_monster.attack_damage(player))+ " damage!")
-        print("Don't ignore the monster!!!")
 
 
 if player.health <= 0:
